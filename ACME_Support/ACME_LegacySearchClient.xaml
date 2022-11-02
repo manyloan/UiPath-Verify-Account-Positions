@@ -1,0 +1,163 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ACME_LegacySearchClient" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_LegacyExePath" Type="InArgument(x:String)" />
+    <x:Property Name="in_ClientID" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1896,1754</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ACME_LegacySearchClient_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="66">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ACME_LegacySearchClient" sap:VirtualizedContainerService.HintSize="798,1689" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="756,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[in_LegacyExePath]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[in_LegacyExePath.Replace("\ACME-System3.exe", "\acme-System3.exe")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: ACME System 3" sap:VirtualizedContainerService.HintSize="756,1497" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="a2580c1a-b3b0-4da0-b9c3-af2dff7969a4" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="722,1208" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Include inactive clients'" sap:VirtualizedContainerService.HintSize="680,156" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="a2580c1a-b3b0-4da0-b9c3-af2dff7969a4" Version="V1">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="26, 208, 148, 19" ElementType="CheckBox" FriendlyName="'Include inactive clients'" FullSelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='checkBox1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='checkBox1' check:fulltext='Include inactive clients' /&gt;" Guid="3ba3721b-4774-4db1-80d9-155bb84295ff" InformativeScreenshot="96963360164fd5955d1b4984b9b1a891.png" ScopeSelectorArgument="&lt;wnd app='acme-system3.exe' ctrlname='SearchingClient' /&gt;" SearchSteps="Selector, FuzzySelector" />
+              </uix:NCheck.Target>
+            </uix:NCheck>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'WindowsForms10.EDIT.app…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="680,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a2580c1a-b3b0-4da0-b9c3-af2dff7969a4" Text="[in_ClientID]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="26, 163, 696, 24" ElementType="InputBox" FriendlyName="'WindowsForms10.EDIT.app…'" FullSelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='textBox1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='textBox1' /&gt;" Guid="42ac3c30-9113-4438-a2dc-338dfca986c7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAArwAAAAcCAYAAACDOWyEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAECSURBVHhe7dY7qoRAAETR2bs7cH+mauAPDAQD+9ETvESYvItz4Ga1gPocx1EkSZKk1BxeSZIkRfd/ePd9L8uySJIkSU03jmOZ5/l9eNd1Lfd9l+d5JEmSpGY7z/N7el+Ht77hOgAAgJZd1+XwAgCQy+EFACCawwsAQDSHFwCAaA4vAADRHF4AAKI5vAAARHN4AQCI5vACABDN4QUAIJrDCwBANIcXAIBoDi8AANEcXgAAojm8AABEc3gBAIjm8AIAEM3hBQAgmsMLAEC0n4d3GIbv6ZUkSZJarX7aaZreh3fbttL3fem6TpIkSWq2+mnrt30dXkmSJCkxh1eSJEnBHeUPGLJ38cBxIe0AAAAASUVORK5CYII=" InformativeScreenshot="f1d362d91ae9edeab0c9d227b34aa7e9.png" ScopeSelectorArgument="&lt;wnd app='acme-system3.exe' ctrlname='SearchingClient' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="680,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2580c1a-b3b0-4da0-b9c3-af2dff7969a4" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="602, 200, 120, 35" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='button1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='button1' check:text='Search' /&gt;" Guid="52becf93-e924-408d-9461-c25e4dd5c0ef" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAnCAYAAADNVyyKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIlSURBVHhe7Zs9ssIgFIWzLRbEelgNzXvuwEbHSnagY+ECdO7jkKAkMlo45knuKb4i8pMZPu4JFnTn81mIHihcGRSujAfhx+NR9vu9bLdb2Ww2pEHgDg7hcup3JBwddrudnE4nuVwucr1eSYPAHRzC5VT6SDh2BTrWJiHtAZdwWjoeCUcUsLKXA1zCael4JBz5XxtI2gVOS8cUvnAoXBkUrgwKVwaFK4PClUHhyqBwZbQtPHixppOu6zHWSaj1+wTBiems+FrbF9Ow8Cg7SrYuDM9BvDPSmZmkU/jMVBccm8CIC+VvH4LC5yaIQ5wbK857CRXJwdsoJUe+EetzGow/BaktJ0USGZ9tTItBaHDFPPF9Hu8ahLuizdzS5ntpWDhAjMcFN5AziMtSISTGe5KTnn3aINbnsQWxr83VOgh3eZ64aSA+p0bAZ8P6oR8kx81WjpsjXd6gceFj+oruFz2JGSqvJFdhqtpJlSdZSdw9qjFPtXIn/Wb9nLxBu8JReZUDmrd9Fd8qcdKeSGOHaE6/FbIovD7w/8ECF5EaCb6I1Ryxt4jvv9v3zXDfLGUyPIh8GukUPi+T/+HpAFcseNoAt/biYIYDXzqU9W3GPhGOeZ4c2iicfDUUrgwKVwaFK4PClUHhyqBwZTwVzpsny+LlzRPeLVsWL++W8fboMoA7OHx5exQcDgdZr9eyWq3k5/eXNAjcwSFcTv0+CCfLhsKVQeGqOMsfCt9iT/5u2UIAAAAASUVORK5CYII=" InformativeScreenshot="420e396270b4b181fe4e224ccacb9142.png" ScopeSelectorArgument="&lt;wnd app='acme-system3.exe' ctrlname='SearchingClient' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'AD38755'" sap:VirtualizedContainerService.HintSize="680,466" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="a2580c1a-b3b0-4da0-b9c3-af2dff7969a4" Timeout="2" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Double" DisplayName="Click 'ClientID'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2580c1a-b3b0-4da0-b9c3-af2dff7969a4" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="22, 273, 675, 19" FriendlyName="'AD38755'" FullSelectorArgument="[String.Format(&quot;&lt;wnd ctrlname='listView1' /&gt;&lt;ctrl name='{0}' role='list item' /&gt;&quot;, in_ClientID)]" FuzzySelectorArgument="[String.Format(&quot;&lt;wnd ctrlname='listView1' /&gt;&lt;ctrl name='{0}' role='list item' automationid='' check:text='{0}' /&gt;&quot;, in_ClientID)]" Guid="1a308ef9-834f-475a-9800-b99d40dbd489" ImageBase64="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" InformativeScreenshot="59d108419864e6e3abc65dbc466646f5.png" ScopeSelectorArgument="&lt;wnd app='acme-system3.exe' ctrlname='SearchingClient' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,116" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Throw Exception="[new BusinessRuleException(&quot;ClientID doesnt found&quot;)]" sap:VirtualizedContainerService.HintSize="208,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="22, 273, 675, 19" FriendlyName="'AD38755'" FullSelectorArgument="[String.Format(&quot;&lt;wnd ctrlname='listView1' /&gt;&lt;ctrl name='{0}' role='list item' /&gt;&quot;, in_ClientID)]" FuzzySelectorArgument="[String.Format(&quot;&lt;wnd ctrlname='listView1' /&gt;&lt;ctrl name='{0}' role='list item' automationid='' check:text='{0}' /&gt;&quot;, in_ClientID)]" Guid="1cf36abf-92ed-426c-b8b0-16ec9f873fda" ImageBase64="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" InformativeScreenshot="8486113e576e18726b6ac8640457794c.png" ScopeSelectorArgument="&lt;wnd app='acme-system3.exe' ctrlname='SearchingClient' /&gt;" SearchSteps="Selector, FuzzySelector" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 748, 470" FilePath="[in_LegacyExePath]" IconBase64="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" InformativeScreenshot="13b1a1e9edbf4554d8da2dc8da55082f.png" Selector="&lt;wnd app='acme-system3.exe' ctrlname='SearchingClient'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
